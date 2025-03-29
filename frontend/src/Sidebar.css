@@ -1,0 +1,154 @@
+/* Reset and Sidebar Container */
+.sidebar {
+  width: 300px; /* Sidebar width */
+  background: linear-gradient(135deg, #FF69B4, #00FFFF); /* Matching background */
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  height: 100vh; /* Full height */
+  overflow-y: auto;
+  position: fixed; /* Fix sidebar over the chat page */
+  top: 0;
+  left: 0; /* Sidebar starts from the left */
+  z-index: 1000; /* Higher z-index to display above chat */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.sidebar h2, .sidebar h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: white; /* White text for better contrast */
+}
+
+.sidebar ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background: rgba(255, 255, 255, 0.15); /* Transparency for soft look */
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Hover effect */
+  transform: translateX(5px); /* Slide effect */
+}
+
+.sidebar li.selected {
+  background-color: rgba(0, 255, 255, 0.7); /* Cyan highlight for selected item */
+  color: white;
+}
+
+.sidebar li.selected:hover {
+  background-color: rgba(0, 255, 255, 0.9); /* Brighter hover effect */
+}
+
+.sidebar ul ul {
+  margin-left: 20px; /* Indentation for nested lists */
+}
+
+.sidebar ul ul li {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background difference for subtopics */
+}
+
+.sidebar li ul {
+  padding-left: 15px;
+}
+
+.sidebar ul ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar li ul li {
+  font-size: 0.9rem;
+  padding: 8px;
+}
+
+/* Dropdown Menu Styling */
+.sidebar select {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2); /* Translucent background */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Light border */
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar select:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar select option {
+  background: rgba(0, 0, 0, 0.7); /* Darker background for dropdown items */
+  color: white;
+}
+
+/* Style for Copy Button */
+.copy-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.2); /* Translucent button */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.copy-button:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Brighter hover effect */
+  transform: scale(1.1); /* Slight zoom */
+}
+
+.copy-button:active {
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly different color when clicked */
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2); /* Light scrollbar track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 105, 180, 0.8); /* Pink scrollbar */
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 105, 180, 1); /* Brighter hover effect */
+}
+
+/* Optional: Style for toggle button (if any) */
+.toggle-sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #FF69B4; /* Pink toggle button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 1100; /* Above sidebar */
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.toggle-sidebar:hover {
+  background-color: #FF1493; /* Darker pink on hover */
+  transform: scale(1.1); /* Small zoom effect */
+}
