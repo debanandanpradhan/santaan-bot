@@ -58,6 +58,7 @@ OPENALEX_API_KEY=424242
  
 ### 7. Navigate to the frontend folder and run these in command line 
 `npm install`
+
 `npm install axios firebase react react-dom react-router-dom react-scripts`
 ### 8. create a .env file in backend folder and paste these
 ```
