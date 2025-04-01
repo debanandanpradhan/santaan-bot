@@ -33,8 +33,8 @@ GROQ_API_KEY=
 
 ```
 ### 3. Run `bookconverter.py`
-### 4. Navigate to backend folder and run this in command line
-`npm install axios cors dotenv express express-rate-limit firebase-admin helmet morgan @huggingface/inference @pinecone-database/pinecone`
+### 4. Navigate to backend folder and run this in command line if setting up from scratch
+`npm install axios cors dotenv express express-rate-limit firebase-admin helmet morgan @huggingface/inference @pinecone-database/pinecone` else if cloning `npm install` 
 ### 5. Make sure to setup firebase and get the `serviceAccontKey.json`
 ### 6. create a .env file in backend folder and paste these
 ```
@@ -56,10 +56,8 @@ OPENALEX_API_KEY=424242
 ```
 # Frontend Setup:
  
-### 7. Navigate to the frontend folder and run these in command line 
-`npm install`
-
-`npm install axios firebase react react-dom react-router-dom react-scripts`
+### 7. Navigate to the frontend folder and run these in command line if setting up from scratch
+`npm install axios firebase react react-dom react-router-dom react-scripts` else if cloning `npm install` 
 ### 8. create a .env file in backend folder and paste these
 ```
 REACT_APP_FIREBASE_API_KEY=
