@@ -17,7 +17,7 @@ Smooth user experience with React.js with high accuracy of the query responses.
 ## Express.js & Node.js Setup:
 The backend forms the foundation of the Santaan-RAG Bot. Built on Node.js and Express.js, it handles server-side operations, API requests, and database interactions. The backend includes multiple routes to process login, signup, and query handling requests. Middleware like helmet (for security), morgan (for logging), and rate-limit (to limit excessive requests) have been integrated to enhance the reliability and security of the backend. Additionally, the project uses dotenv to manage environment variables such as API keys and Firebase configurations.
 ## Pinecone Vector Database Integration:
-The backend integrates with Pinecone, a powerful vector database used to store book content in vectorized form. Each book is split into chunks (200-word segments), converted into embeddings using the Hugging Face Inference API (MiniLM-L6-v2), and stored as high-dimensional vectors in Pinecone. This allows fast vector similarity search whenever users ask a question, helping the chatbot retrieve the most contextually relevant text chunks.
+The backend integrates with Pinecone, a powerful vector database used to store book content in vectorized form. Each book is split into chunks (200-word segments), converted into embeddings using the and stored as high-dimensional vectors in Pinecone. This allows fast vector similarity search whenever users ask a question, helping the chatbot retrieve the most contextually relevant text chunks.
 ## Authentication:
 User authentication is implemented via Firebase Admin SDK, allowing users to securely log in and maintain session persistence. Token-based authentication ensures that only authenticated users can interact with the chatbot. The Firebase setup supports email-password-based login and maintains user data securely.
 ## Steps to setup backend:
@@ -30,6 +30,7 @@ PINECONE_INDEX=
 PINECONE_ENVIRONMENT=
 OPENAI_API_KEY=
 GROQ_API_KEY=
+COHERE_API_KEY=
 
 ```
 ### 3. Run `bookconverter.py`
@@ -52,6 +53,7 @@ FIREBASE_MESSAGING_SENDER_ID=
 FIREBASE_APP_ID=
 HUGGINGFACE_API_KEY=
 OPENALEX_API_KEY=424242
+COHERE_API_KEY=
 
 ```
 # Frontend Setup:
